@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="/static/css/morsetransmission.css">
+<script src="/static/js/morse.js"></script>
+<script src="/static/js/morsetransmission.js"></script>
+
+<div>
+  <h1 style="display: inline;">Morse Transmission Challenge</h1>
+  <div id="options-container" style="float: right;"></div>
+</div>
+
+<div class="card mb-3" style="margin-top: 1rem!important; height: 150px;">
+    <div id="game" class="card-body text-primary">
+
+        <div class="progress" style="display:none;">
+            <div id="timer" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"></div>
+        </div>
+
+        <span class="start">
+            <div class="center">
+                <a href="#" class="btn btn-primary" onclick="gameStart(); return false;">Start Game</a>
+            </div>
+        </span>
+
+        <span class="round-intro">
+            <i>Round <span class="round-number"></span> - <span id="round-caption"></span></i>
+        </span>
+
+        <span class="round-challenge">
+            <div>Score: <span class="score"></span></div>
+            <div>Round <span class="round-number"></span> (<span id="round-phrases"></span> left)</div>
+            <div>Streak: <span id="round-streak"></span></div>
+            <br>
+            <em><div id="log"></div></em>
+
+            <div class="center">
+                <span id="challenge-phrase" style="font-size: xxx-large;"></span>
+            </div>
+        </span>
+
+        <span class="gameover-screen">
+            <div>Final Score: <span class="score"></span></div>
+            <a href="#" class="btn btn-primary" onclick="gameStart(); return false;">Restart</a>
+            <div class="center">
+                <span style="font-size: xxx-large;">GAME OVER</span>
+            </div>
+        </span>
+    </div>
+</div>
+
+<div class="card card-message bg-light mb-3">
+    <div class="card-header">Plaintext</div>
+    <div class="card-body">
+        <span id="message-english" class="message"></span>
+        &nbsp
+    </div>
+</div>
+
+<div class="card card-message bg-light mb-3">
+    <div class="card-header">Morse Code
+    </div>
+    <div class="card-body">
+        <a href="#" class="btn btn-warning" style="float: right;" onclick="clearMessage(); return false;">Clear [Backspace]</a>
+        <span id="message-morse" class="message morse"></span>
+        &nbsp
+
+    </div>
+
+</div>
+
+<div id="transmitter" class="noselect">
+    Transmit
+</div>
+
+<div style="text-align: center;">
+    <br>
+    Tap to send a dot.<br>
+    Hold down to send a dash.<br>
+    You can also use Space bar / 'M' key.<br>
+</div>

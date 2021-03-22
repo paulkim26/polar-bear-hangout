@@ -1,0 +1,105 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    background-image: url("/static/img/bg_fleur.png");
+}
+
+.container {
+    flex: 1 0 auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    max-width: 850px;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12)
+    ;
+}
+
+.footer {
+    flex-shrink: 0;
+    text-align: center;
+    background-color: #343a40;
+    color: white;
+}
+
+/*Navbar*/
+nav {
+    padding: 0px 0px 0px 10px !important;
+}
+
+nav ul > li.nav-item > a.nav-link {
+    margin: 7px 3px 7px 3px;
+}
+
+#navbar-right {
+    margin-right: 0px !important;
+}
+
+#navbar-login-form {
+    width: 250px;
+}
+
+.navbar-brand {
+    font-family: 'Piedra', cursive;
+}
+
+#logo {
+    transform: translate(0px, -1px);
+}
+
+li.nav-item.active{
+    background-color: rgba(255,255,255,.2);
+}
+
+li.nav-item.dropdown.show{
+    background-color: rgba(255,255,255,.1);
+}
+
+/*Toasts*/
+.toast-area {
+    z-index: 999;
+    position: fixed;
+    top: 75px;
+    right: 0;
+    padding-right: 20px;
+}
+
+.toast {
+    /*min-width: 200px;*/
+    background-color: rgba(255,255,255,.75)
+}
+
+.toast:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+/*Media Controls*/
+.volume-slider {
+   vertical-align: middle;
+}
+
+.volume-control .volume-icon svg {
+  width: 2em;
+}
+
+/*Options Menu*/
+#options-dropdown {
+  padding: 10px;
+}
+
+#options-dropdown .form-group:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+#options-dropdown .form-group:last-child {
+  margin-bottom: 0px!important;
+}

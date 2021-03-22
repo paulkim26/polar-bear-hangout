@@ -1,0 +1,54 @@
+.monospace {
+  font-family: 'Courier Prime', monospace;
+  font-size: x-large;
+}
+
+#practice-alert {
+  display: none;
+  text-align: center;
+}
+
+.alert {
+  margin-bottom: 10px;
+}
+
+#work-area > .alert {
+  min-height: 300px;
+}
+
+/*Header Options*/
+#playback-options {
+  margin-bottom: 10px;
+}
+
+#playback-options > * {
+  margin: 0px 10px 0px 0px!important;
+}
+
+#playback-button {
+  width: 150px;
+  padding: 0px;
+  height: 2.4em;
+}
+
+#playback-button > svg {
+  width: 2.15em;
+}
+
+/*Message Input*/
+#plaintext-form textarea {
+  margin-bottom: 5px;
+}
+
+#plaintext-form button {
+  width: 100%;
+}
+
+
+#plaintext-form > label {
+  transform: translate(0px, -3px);
+}
+
+#plaintext-entry {
+  resize: none;
+}

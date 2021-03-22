@@ -1,0 +1,37 @@
+.card-header {
+    padding: 0.5rem;
+}
+
+.card-body {
+    padding: 0.5rem;
+}
+
+.card-message .card-body {
+    padding: 0.5rem 1.5rem;
+}
+
+.message {
+    font-size: xxx-large;
+}
+
+.morse{
+    font-family: 'Muli', sans-serif;
+}
+
+#transmitter {
+    font-size: xxx-large;
+    text-align: center;
+    border-style: outset;
+    background-color: lightgrey;
+    width: 500px;
+    margin: auto;
+}
+
+#transmitter.pressed {
+    border-style: inset;
+    background-color: darkgrey;
+}
+
+.challenge-letter.complete {
+    color:gold;
+}

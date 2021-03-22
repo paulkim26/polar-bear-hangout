@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="/static/css/cryptogram.css">
+<script src="/static/js/cryptogram.js"></script>
+
+<div style="margin-bottom: 15px">
+
+
+
+    <a href="/cryptograms" class="btn btn-danger">Back to Puzzle List</a>
+
+    <button type="button" class="btn btn-secondary" id="instructions-button" onclick="toggleInstructions();">
+        <span class="show">
+            Show Instructions
+            <svg class="bi bi-caret-down-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+            </svg>
+        </span>
+        <span class="hide" style="display:none;">
+            Hide Instructions
+            <svg class="bi bi-caret-up-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+            </svg>
+        </span>
+    </button>
+
+    <div class="alert alert-secondary" role="alert" id="cryptogram-instructions" style="display:none;">
+        <h4 class="alert-heading">Instructions</h4>
+        <p>In the encrypted message below, each letter has been replaced by another random letter. Fill in each letter and check to see if it's correct.</p>
+        <hr>
+        <h4 class="alert-heading">Tip 1: Look for Short Words</h4>
+        <p>Look for words with only a few letters.</p>
+        _ > A / I<br>
+        __ > OF / TO / IN / IS / IT<br>
+        ___ > THE / AND / FOR / WAS / HIS<br>
+
+        <hr>
+        <h4 class="alert-heading">Tip 2: Punctuation</h4>
+        <p>Use apostrophes, hyphens, periods, and commas to your advantage.</p>
+        ____'_ > THAT'S<br>
+        ___'__ > YOU'LL / YOU'RE<br>
+        ___'_ > THAT'S<br>
+        __'_ > IT'S<br>
+        _'_ > I'M<br>
+
+        <hr>
+        <h4 class="alert-heading">Tip 3: Frequency Analysis</h4>
+        <p>If a letter shows up frequently, it is likely one of the more common letters in the english alphabet such as E, T, A, O, I, N...</p>
+        <p>see: <a href="http://letterfrequency.org/" target="_BLANK">http://letterfrequency.org/</a></p>
+
+        <hr>
+        <h4 class="alert-heading">Tip 4: Double Letters</h4>
+        <p>Look for pairs of letters. Common pairs include LL, EE, SS, OO, and TT.</p>
+    </div>
+</div>
+
+<h1>Cryptogram #<span id="puzzle-index"></span></h1>
+
+<div id="work-area"></div>
+
+<div class="alert alert-primary" id="letters-remaining" role="alert"></div>
+
+
+
+<div id="check-result"></div>
+
+<div id="cryptogram-buttons">
+    <button type="button" class="btn btn-primary" onclick="checkAnswer();">Check</button>
+    <button type="button" class="btn btn-secondary" onclick="applyHint();">Hint</button>
+    <button type="button" class="btn btn-danger" onclick="resetCryptogram();">Reset</button>
+</div>
+
+
+
+<!--templates-->
+<div id="letter-container-template" style="display: none;">
+    <div class="char-container letter-container">
+        <div class="top">
+            <input class="form-control plain-letter" type="text" maxlength="1" pattern="[A-Za-z]">
+        </div>
+
+        <div class="bar"></div>
+
+        <div class="bottom">
+            <span class="cipher-char noselect"></span>
+        </div>
+    </div>
+</div>
+
+<div id="symbol-container-template" style="display: none;">
+    <div class="char-container symbol-container">
+        <div class="top">
+            <span class="cipher-char noselect"></span>
+        </div>
+    </div>
+</div>

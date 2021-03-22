@@ -1,0 +1,22 @@
+.card-puzzle {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+.card-puzzle:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.card-puzzle .icon {
+    position: absolute;
+    bottom: 0;
+    right: 3px;
+}
+
+.container > div {
+    margin-bottom: 7px
+}

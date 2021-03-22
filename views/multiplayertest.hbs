@@ -1,0 +1,16 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script src="/static/js/multiplayertest.js"></script>
+
+<h1>Public Chat</h1>
+
+<div id="chat-log" style="background-color: green; color: white; font-family: 'Courier Prime', monospace; font-size: x-large;"></div>
+
+<div id="typing-users-list" style="height: 5em;"></div>
+
+<form id="chat-form" autocomplete="off">
+  <div class="form-group">
+    <input type="text" class="form-control" id="message" name="message" maxlength="140">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Send</button>
+</form>

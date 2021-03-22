@@ -1,0 +1,9 @@
+#scores-game-type {
+    display: inline-block;
+    width: 50%;
+}
+
+.scores-options > button {
+    transform: translate(0px, -3px);
+    /*width: 180px;*/
+}
