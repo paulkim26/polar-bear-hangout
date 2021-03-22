@@ -1,7 +1,7 @@
 # Polar Bear Hangout
 
 ## Introduction
-Polar Bear Hangout is a online educational designed to teach [Scouting](https://en.wikipedia.org/wiki/Scouting) skills in an engaging and effective manner to Boy Scouts, Girl Scouts, Troop leaders, and anyone interested in learning:
+Polar Bear Hangout is a online educational platform designed to teach [Scouting](https://en.wikipedia.org/wiki/Scouting) skills in an engaging and effective manner to Boy Scouts, Girl Scouts, Troop leaders, and anyone interested in learning:
 
 - Morse Code
 - Cryptography
